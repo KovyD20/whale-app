@@ -1,0 +1,28 @@
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kd-nginx-lb
+    depends_on:
+      - app1
+      - app2
+    ports:
+      - "${NGINX_HOST_PORT:-8080}:80"
+    restart: unless-stopped
+
+  app1:
+    image: ${APP_IMAGE:-kd-whale_app:latest}
+    container_name: kd-app-1
+    environment:
+      - PORT=3000
+      - INSTANCE_ID=app-1
+    restart: unless-stopped
+
+  app2:
+    image: ${APP_IMAGE:-kd-whale_app:latest}
+    container_name: kd-app-2
+    environment:
+      - PORT=3000
+      - INSTANCE_ID=app-2
+    restart: unless-stopped
