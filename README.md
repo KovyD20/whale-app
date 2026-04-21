@@ -2,19 +2,17 @@
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-![Architecture-style](images/architecture-style.png)
-
-
-
 <br />
 <div align="center">
   <h3 align="center">Whale App – DevOps Project</h3>
+
 
   <p align="center">
     Dockerized Node.js application deployed on AWS using Terraform
   </p>
 </div>
+
+![Architecture-style](images/architecture-style.png)
 
 <details>
   <summary>Table of Contents</summary>
@@ -124,7 +122,13 @@ Creates the AWS resources.
 - AWS credentials required (~/.aws/credentials)
 - Region: eu-west-3
 
-![Architecture](images/architecture.png)
+<p>
+  <img src="images/architecture.png" alt="Architecture" width="600"/>
+</p>
+
+<p>
+  <img src="images/subnetsmap.png" alt="Architecture" width="600"/>
+</p>
 
 ## Roadmap
 
